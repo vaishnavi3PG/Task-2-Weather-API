@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserContext } from './context/UserContext';
@@ -8,9 +8,7 @@ import Signup from './component/signup';
 
 function App() {
 
-  const [name, setName] = useState("vaishnavi");
-  const [nameSend, setnameSend] = useState("test");
-
+  const [name, setName] = useState("user");
 
   return (
     <UserContext.Provider value={name}>

@@ -1,26 +1,13 @@
-import { useState } from 'react';
-import './signup.css';
+import '../stylesheet/signup.css';
 import { useLocalStorage } from "./useLocalStorage";
 import { Link } from "react-router-dom";
-import { UserContext } from '../context/UserContext';
-import MultipleWeather from './multipleweather';
-
-
 
 const Signup = () => {
   const [name, setName] = useLocalStorage("name", "");
-  const [password, setPassword] = useLocalStorage("name2", "");
+  const [password, setPassword] = useLocalStorage("password", "");
   const [checked, setChecked] = useLocalStorage("checked", false);
 
-
-
-  function handleClick() {
-
-
-  }
-
   return (
-
     <form>
       <div className="container">
 
@@ -32,10 +19,10 @@ const Signup = () => {
           onChange={(e) => {
             setName(e.target.value)
           }
-
           }
           placeholder="Enter Username"
           aria-label="fullname"
+          required
         />
 
         <label for="email"><b>Enter Email</b></label>
@@ -43,6 +30,7 @@ const Signup = () => {
           type="text"
           name="email"
           placeholder="Enter Password"
+          required
         />
 
         <label for="password"><b>Enter Password</b></label>
@@ -53,6 +41,7 @@ const Signup = () => {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter Password"
           aria-label="fullname"
+          required
         />
 
         <label for="password"><b>Repeat Password</b></label>
@@ -60,28 +49,25 @@ const Signup = () => {
           type="text"
           name="password"
           placeholder="Enter Password"
+          required
         />
-
 
         <label>
           <input
             type="checkbox"
             checked={checked}
             onChange={(e) => setChecked(e.target.checked)}
+            required
           />{" "}
           Not a robot?
         </label>
 
         <Link to="/multipleWeather">
-          <input type="submit" value="Submit" onClick={handleClick}></input>
+          <input type="submit" value="Submit"></input>
         </Link>
       </div>
-
     </form>
-
-
   );
-
 };
 
 export default Signup;
