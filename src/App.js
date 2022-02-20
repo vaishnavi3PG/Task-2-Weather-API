@@ -5,6 +5,7 @@ import { UserContext } from './context/UserContext';
 import Weather from './component/weather';
 import MultipleWeather from './component/multipleweather';
 import Signup from './component/signup';
+import ErrorPage404 from "./component/errorPage";
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
           <Route path='/' exact element={<Weather />} />
           <Route path='/multipleWeather' exact element={<MultipleWeather />} />
           <Route path='/signup' exact element={<Signup />} />
-          <Route element={<Signup />} />
+          <Route path='*' element={<ErrorPage404 />} />
         </Routes>
       </Router>
     </UserContext.Provider>

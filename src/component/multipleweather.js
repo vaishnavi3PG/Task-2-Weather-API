@@ -14,11 +14,11 @@ function MultipleWeather() {
         right: "0",
     };
 
-    const [City1, setCity1] = useState(null);    // storing data..from api
-    const [City2, setCity2] = useState(null);
-    const [City3, setCity3] = useState(null);
-    const [City4, setCity4] = useState(null);
-    const [City5, setCity5] = useState(null);
+    const [city1, setCity1] = useState(null);    // storing data..from api
+    const [city2, setCity2] = useState(null);
+    const [city3, setCity3] = useState(null);
+    const [city4, setCity4] = useState(null);
+    const [city5, setCity5] = useState(null);
 
     const [Search, setSearch] = useState("");      // for searching..to api         
     useEffect(() => {
@@ -54,16 +54,16 @@ function MultipleWeather() {
                             setSearch(event.target.value)
                         }} />
                     </div>
-                    {!City1 ? (
+                    {!city1 ? (
                         <p className='error'>No city found</p>
                     ) : (
                         <div className="seconddiv">
                             <h2>{Search}</h2>
-                            <h3>{City1.main.temp} °C</h3>
-                            <p>Min: {City1.main.temp_min} °C | Max {City1.main.temp_max} °C</p>
-                            <p>Pressure: {City1.main.pressure} hPa</p>
-                            <p>Humidity: {City1.main.humidity} %</p>
-                            <p>Feels Like: {City1.main.feels_like} °C</p>
+                            <h3>{city1.main.temp} °C</h3>
+                            <p>Min: {city1.main.temp_min} °C | Max {city1.main.temp_max} °C</p>
+                            <p>Pressure: {city1.main.pressure} hPa</p>
+                            <p>Humidity: {city1.main.humidity} %</p>
+                            <p>Feels Like: {city1.main.feels_like} °C</p>
                         </div>
                     )
                     }
@@ -83,17 +83,17 @@ function MultipleWeather() {
                             setSearch(event.target.value)
                         }} />
                     </div>
-                    {!City2 ? (
+                    {!city2 ? (
                         <p className='error'>No city found</p>
                     ) : (
                         <div className="seconddiv">
 
                             <h2>{Search}</h2>
-                            <h3>{City2.main.temp} °C</h3>
-                            <p>Min: {City2.main.temp_min} °C | Max {City2.main.temp_max} °C</p>
-                            <p>Pressure: {City2.main.pressure} hPa</p>
-                            <p>Humidity: {City2.main.humidity} %</p>
-                            <p>Feels Like: {City2.main.feels_like} °C</p>
+                            <h3>{city2.main.temp} °C</h3>
+                            <p>Min: {city2.main.temp_min} °C | Max {city2.main.temp_max} °C</p>
+                            <p>Pressure: {city2.main.pressure} hPa</p>
+                            <p>Humidity: {city2.main.humidity} %</p>
+                            <p>Feels Like: {city2.main.feels_like} °C</p>
                         </div>
                     )
                     }
@@ -113,17 +113,17 @@ function MultipleWeather() {
                             setSearch(event.target.value)
                         }} />
                     </div>
-                    {!City3 ? (
+                    {!city3 ? (
                         <p className='error'>No city found</p>
                     ) : (
                         <div className="seconddiv">
 
                             <h2>{Search}</h2>
-                            <h3>{City3.main.temp} °C</h3>
-                            <p>Min: {City3.main.temp_min} °C | Max {City3.main.temp_max} °C</p>
-                            <p>Pressure: {City3.main.pressure} hPa</p>
-                            <p>Humidity: {City3.main.humidity} %</p>
-                            <p>Feels Like: {City3.main.feels_like} °C</p>
+                            <h3>{city3.main.temp} °C</h3>
+                            <p>Min: {city3.main.temp_min} °C | Max {city3.main.temp_max} °C</p>
+                            <p>Pressure: {city3.main.pressure} hPa</p>
+                            <p>Humidity: {city3.main.humidity} %</p>
+                            <p>Feels Like: {city3.main.feels_like} °C</p>
                         </div>
                     )
                     }
@@ -142,16 +142,16 @@ function MultipleWeather() {
                             setSearch(event.target.value)
                         }} />
                     </div>
-                    {!City4 ? (
+                    {!city4 ? (
                         <p className='error'>No city found</p>
                     ) : (
                         <div className="seconddiv">
                             <h2>{Search}</h2>
-                            <h3>{City4.main.temp} °C</h3>
-                            <p>Min: {City4.main.temp_min} °C | Max {City4.main.temp_max} °C</p>
-                            <p>Pressure: {City4.main.pressure} hPa</p>
-                            <p>Humidity: {City4.main.humidity} %</p>
-                            <p>Feels Like: {City4.main.feels_like} °C</p>
+                            <h3>{city4.main.temp} °C</h3>
+                            <p>Min: {city4.main.temp_min} °C | Max {city4.main.temp_max} °C</p>
+                            <p>Pressure: {city4.main.pressure} hPa</p>
+                            <p>Humidity: {city4.main.humidity} %</p>
+                            <p>Feels Like: {city4.main.feels_like} °C</p>
                         </div>
                     )
                     }
@@ -171,17 +171,17 @@ function MultipleWeather() {
                             setSearch(event.target.value)
                         }} />
                     </div>
-                    {!City5 ? (
+                    {!city5 ? (
                         <p className='error'>No city found</p>
                     ) : (
                         <div className="seconddiv">
 
                             <h2>{Search}</h2>
-                            <h3>{City5.main.temp} °C</h3>
-                            <p>Min: {City5.main.temp_min} °C | Max {City5.main.temp_max} °C</p>
-                            <p>Pressure: {City5.main.pressure} hPa</p>
-                            <p>Humidity: {City5.main.humidity} %</p>
-                            <p>Feels Like: {City5.main.feels_like} °C</p>
+                            <h3>{city5.main.temp} °C</h3>
+                            <p>Min: {city5.main.temp_min} °C | Max {city5.main.temp_max} °C</p>
+                            <p>Pressure: {city5.main.pressure} hPa</p>
+                            <p>Humidity: {city5.main.humidity} %</p>
+                            <p>Feels Like: {city5.main.feels_like} °C</p>
                         </div>
                     )
                     }

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [name, setName] = useLocalStorage("name", "");
-  const [password, setPassword] = useLocalStorage("password", "");
   const [checked, setChecked] = useLocalStorage("checked", false);
 
   return (
@@ -37,8 +36,6 @@ const Signup = () => {
         <input
           type="text"
           name="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter Password"
           aria-label="fullname"
           required
